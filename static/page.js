@@ -233,6 +233,9 @@ module.exports = function (req, res, url) {
 			<a href="/pages/html/create.html" class="button_big">CREATE</a>
 		</nav>
 	</header>
+<form enctype='multipart/form-data' action='/upload_movie' method='post'>
+	<input id='file' type="file" onchange="this.form.submit()" name='import' />
+</form>
 	
 	<body style="margin:0px" onload="hideHeader()">${toObjectString(attrs, params)
 		}</body>${stuff.pages[url.pathname] || ''}`)
